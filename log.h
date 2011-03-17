@@ -3,8 +3,8 @@
 #include <string.h>
 #include <sys/time.h>
 
-#define SIZE_DATE 9		//  dd/mm/yy
-#define SIZE_TIME 9		//  hh:mm:ss
+#define SIZE_DATE 9		   //  dd/mm/yy
+#define SIZE_TIME 9		   //  hh:mm:ss
 #define SIZE_LINE 200
 
 typedef struct

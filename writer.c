@@ -20,7 +20,7 @@ int main()
 
 		save_log(&cmd); //saving log
 
-		if( strcmp(line, "quit") != 0 ) //if the command wasn't quit then we'll exit
+		if( strcmp(line, "fim") != 0 ) //if the command wasn't EXIT then we'll exit
 		{
 			system(line); //executes the command
 		}else

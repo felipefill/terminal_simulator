@@ -31,7 +31,7 @@ char* get_time()
 
 	ret = (char*) malloc(sizeof(char) * SIZE_TIME); //allocating memory
 
-	lt= time(NULL); //getting time
+	lt= time(NULL);
 	strcpy(t, asctime(localtime(&lt))); //copying the time to t (currently unformatted)
 
 	for( i = 0; i < SIZE_TIME - 1; i++ ) //let's format( hh:mm:ss starts at char 11 )
@@ -111,9 +111,11 @@ void read_log()
 
 	fread(cmd, sizeof(command)*count, count, log_file);
 
+	printf("******************************************************\n");
+
 	for( i = 0; i < count; i++)
 	{
-		if( strcmp("quit", cmd[i].line ) != 0 )
+		if( strcmp("fim", cmd[i].line ) != 0 )
 		{
 			printf("Data: %s, hora: %s ~ Comando %d: %s\n", cmd[i].date, cmd[i].time, cmd[i].count, cmd[i].line);
 		}else
