@@ -3,26 +3,23 @@
 #include <string.h>
 #include <sys/time.h>
 
-#define SIZE_DATE 9
-#define SIZE_TIME 9
+#define SIZE_DATE 9		//  dd/mm/yy
+#define SIZE_TIME 9		//  hh:mm:ss
 #define SIZE_LINE 200
 
 typedef struct
-{
+{ //struct for the command's info
 	char line[SIZE_LINE];
 	char date[SIZE_DATE];
 	char time[SIZE_TIME];
 	int  count;
 } command;
 
-FILE* open_log(int id);
+char* get_time(); //returns current time
+char* get_date(); //returns current date
 
-char* get_time();
+FILE* open_log(const char* mode); //opens the log file using the given mode
+void save_log(command* cmd); //inserts the command into the log file
+void read_log(); //reads the log
+void close_log(FILE* log_file); //closes the log file
 
-char* get_date();
-
-void save_log(command* cmd);
-
-void read_log();
-
-void close_log(FILE* log_file);
