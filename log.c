@@ -115,7 +115,7 @@ void read_log()
 
 	for( i = 0; i < count; i++)
 	{
-		if( strcmp("fim"fi, cmd[i].line ) != 0 )
+		if( strcmp("fim", cmd[i].line ) != 0 )
 		{
 			printf("Data: %s, hora: %s ~ Comando %d: %s\n", cmd[i].date, cmd[i].time, cmd[i].count, cmd[i].line);
 		}else
