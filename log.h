@@ -1,7 +1,7 @@
 /**
 	Trabalho para a disciplina de Sistemas Operacionais II
 	Simula um terminal e grava um log com os comandos digitados.
-*/
+***/
 
 #include <stdio.h>
 #include <stdlib.h>
